@@ -27,6 +27,11 @@ postRouter
   const post = await Post.findByPk(req.params.postId);
   res.json(post);
 })
+.put(async (req, res) => {
+  const post = await Post.findByPk(req.params.postId);
+  await post.update(req.body);
+  res.sendStatus(200);
+})
 
 
 module.exports = postRouter;

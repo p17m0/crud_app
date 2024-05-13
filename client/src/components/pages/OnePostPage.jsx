@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-
-export default function OnePostPege() {
+export default function OnePostPage() {
   const {postId} = useParams();
   const [post, setPosts] = useState(null);
 
@@ -27,6 +27,9 @@ export default function OnePostPege() {
                 <div className='col-12'>
                     <p>{post.body}</p>
                 </div>
+                <Link to={`/posts/${post.id}/update`} className="btn btn-primary">
+                    Изменить
+                </Link>
             </div>
         </div>
     </div>

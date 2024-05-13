@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import React from "react";
 
 export default function AddPostPage() {
   const navigate = useNavigate();
@@ -34,11 +33,9 @@ export default function AddPostPage() {
                 </lebel>
                 <input type='text' className='form-control' id='addBody' name='body' />
             </div>
-
                 <button type='submit' className='btn btn-primary'>
                     Submit
                 </button>
-
         </form>
     </div>
   );

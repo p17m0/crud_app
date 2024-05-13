@@ -1,10 +1,10 @@
-import React from 'react'
 import { RouterProvider } from 'react-router-dom'
 import { createBrowserRouter } from 'react-router-dom'
 import Layout from './components/Layout'
 import MainPage from './components/pages/MainPage'
-import OnePostPege from './components/pages/OnePostPege'
+import OnePostPage from './components/pages/OnePostPage'
 import AddPostPage from './components/pages/AddPostPage'
+import UpdatePostPage from './components/pages/UpdatePostPage'
 
 function App() {
  const routerConfig =[
@@ -17,7 +17,11 @@ function App() {
       },
       {
         path:'/posts/:postId',
-        element:<OnePostPege />
+        element:<OnePostPage />
+      },
+      {
+        path:'/posts/:postId/update',
+        element:<UpdatePostPage />
       },
       {
         path:'/posts/add',
@@ -31,7 +35,7 @@ function App() {
 
   return  <RouterProvider router={router} />
 
-  
+
 }
 
 export default App
